@@ -1,0 +1,13 @@
+/* TEAM */
+	Web designer: Elmir Latifov
+	Email: elmir.latifov@gmail.com
+	Phone: 0515355340
+	
+
+	Frontend developer: Babak Naghiyev
+	Email: bnagiyev@gmail.com
+	Phone: 055 491 85 98
+
+/* SITE */
+	Created: 07/2018
+	Techs: ES6, Pug, Sass

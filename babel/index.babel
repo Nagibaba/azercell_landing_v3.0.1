@@ -1,0 +1,29 @@
+document.addEventListener('DOMContentLoaded', function (ev) {
+    const minutesDOM = document.querySelector('.minutes'),
+        secondsDOM = document.querySelector('.seconds');
+    let minutes = parseInt(minutesDOM.getAttribute('data-count')),
+        seconds = parseInt(secondsDOM.getAttribute('data-count'));
+
+    const countDown = setInterval(function () {
+        if (seconds == 1 && minutes == 0) {
+            countDownEnded();
+            clearInterval(countDown);
+        }
+        seconds -= 1;
+
+        if (seconds < 0) {
+            minutes -= 1;
+            seconds = 60;
+        }
+
+        let secondsText = seconds < 10 ? '0' + seconds : seconds;
+        let minutesText = minutes < 10 ? '0' + minutes : minutes;
+
+        secondsDOM.innerHTML = secondsText;
+        minutesDOM.innerHTML = minutesText;
+    }, 1000);
+
+    const countDownEnded = function countDownEnded() {
+        console.log('ok');
+    }; 
+})
